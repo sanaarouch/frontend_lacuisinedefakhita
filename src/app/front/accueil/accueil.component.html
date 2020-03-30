@@ -1,0 +1,72 @@
+<head>
+    <meta charset="UTF-8">
+    <title>La Cuisine de Fakhita</title>
+    <meta name="description" content="cuisine faite maison en livraison à domicile pour évenement ou autre"><!--balise seo + meta description-->
+</head>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous"><!--faire apparître icones dans le footer-->
+
+<main><strong>LA CUISINE DE FAKHITA</strong></main>
+<br><!--saut de ligne-->
+<br>
+<br>
+<br>
+<!--arriere plan couleur transparent de la card-->
+<style>
+    .card-background{
+        background-color: rgba(255, 255, 255, .4); 
+        width:100%;
+    }
+</style>
+<div class="container; card-background"> <!--début div container-->
+<div class="row mt-3" style="margin-left: 70px;">
+    <article class="col-6" *ngFor="let article of articles" style="width: 1400px;">
+        <h2>{{article.titre}}</h2><!--incrementation: chaque titre de chaque article-->
+        <img src="assets/{{article.img}}" alt="" class="img-fluid" style="width:400px;height:300px;"><!--incrementation : chemin image de chaque article correspondant-->
+        
+        <p>{{article.contenu}}</p><!--incrementation: chaque contenu de chaque article-->
+        <p>
+            <a [routerLink]="['/article', article._id]" class="btn btn-secondary">VOIR PLUS</a><!--le boutton permet de sortir chaque article par rapport à son id-->
+            <a href="/" class="btn btn-secondary" style="margin-left: 160px;">commander <i class="fa fa-shopping-basket" aria-hidden="true"></i></a>
+      
+        </p>
+    </article>
+</div>
+</div><!--fin de la div container-->
+
+    
+<section class="ensavoirplus">
+	
+	<h2>A propos</h2>
+	<span class="ligne"></span>
+	 <div>
+	 	<article>
+	 		<h3>Qui sommes-nous?</h3>
+             La cuisine de fakhita est une entreprise familiale qui propose de nombreux plats <br>
+             verrines, plateaux pour tout vos évenements. Nous sommes Spécialisé dans la cuisine et <br>prônons particulièrement le "fait maison" qui donne à la cuisine de fakhita toute sa différence.<br>
+             Nous laissons place à l'innovation, car cuisiner est un plaisir.<br> Nous sommes à l'écoute de vos besoins,
+             et de vos attentes.
+	 	</article>
+	 </div>
+</section>
+<!----------------------------------------Footer-------------------------------------------------------------->      
+    <footer>
+            <div>
+                <article>
+                    <h4>9 rue Paul Gauguin</h4>
+                    <p>Pontoise-France</p>
+                </article>
+    
+                <article>
+                    <h4>Mes réseaux</h4>
+                 
+                    <ul><!--les liens des mes réseaux, instagram:blog culinaire-->
+                        <a href="https://instagram.com/la_cuisine_de_fakhita?igshid=1kf72yocgoocm"><i class="fab fa-instagram fa-2x" style="color:black"></i></a>
+                        <a href="https://www.linkedin.com/in/sana-aarouch-b6871b145/"><i class="fab fa-linkedin fa-2x " style="color:black"></i></a>
+                    </ul>
+                
+                </article>
+            </div>
+            <div>
+                <p>Copyrigth &copy; lacuisinedefakhita</p>
+            </div>
+    </footer>

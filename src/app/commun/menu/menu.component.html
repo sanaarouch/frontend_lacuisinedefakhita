@@ -1,0 +1,33 @@
+
+<!-------------------------------menu-------------------------------------->
+<nav class="navbar navbar-expand-md bg-light navbar-light"[style.backgroundColor]="bgColor">
+    <button class="navbar-toggler" (click)="toogleMenu(menu)"><!--menu / boutton-->
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" #menu>
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+                <a routerLink="/" class="nav-link">Accueil</a>
+            </li>
+            <li class="nav-item">
+                <a routerLink="/" class="nav-link">Article</a>
+            </li>
+            <li class="nav-item">
+                <a routerLink="/contact" class="nav-link">Nous contacter</a> <!--router renvoie a la demande contact-->
+            </li>
+        </ul>
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a routerLink="/panier" class="nav-link">Panier</a>
+            </li>
+            <li>
+                <a routerLink="/login-form" class="nav-link">Login</a><!--renvoie à la page login-->
+            </li>
+            <li class="nav-item">
+                <a routerLink="/admin" class="nav-link">Admin</a><!--renvoie à l'admin
+                -->
+            </li>
+        </ul> 
+    </div>
+</nav>
+

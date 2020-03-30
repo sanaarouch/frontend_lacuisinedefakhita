@@ -1,3 +1,4 @@
 export const environment = {
-  production: true
+  production: true,
+  bg : "#f8f8f8"
 };

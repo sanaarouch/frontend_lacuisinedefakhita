@@ -1,0 +1,48 @@
+<div class="row mt-3"><!--début de la div class=row-->
+    <div class="col-4">
+        <app-menu-dashboard></app-menu-dashboard><!--j'ai rajouter le menu du dashboard-->
+    </div>
+    <br><!--saut de ligne-->
+    <br>
+    <br>
+    <br>
+    
+<div class="col-md-8"><!--début de la div -->
+    <form><!--Début du formulaire-->
+            <div class="form-group">
+                <label for="titre" style="color:white"><br>Titre</label>
+                <input type="titre" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="contenu" style="color : white">Contenu</label>
+                <textarea class="form-control" rows="3"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="auteur" style="color: white">Auteur</label>
+                <input type="auteur" class="form-control">
+            </div>
+            <form>
+            <div class="form-group">
+                <label for="photos" style="color:white">Photos</label>
+                <input type="file" class="form-control-file">
+            </div>
+           </form>
+            <div>
+                <label for="Prix en euros" >Prix en Euros</label><br>
+                <input type="number" id="prix" name="prix en euros"
+                    min="10" max="100"><!--déroulé min 10 à 100 euros max pour le prix-->
+            </div>
+            <div class="form-group"  style="color:black">
+                <label style="color :black">Status</label><br><!-- Pour le status de types "radio"-->
+                <input type="radio"  name="publié" value="P"> Publié <br>
+                <input type="radio" name="Brouillon" value="B" checked> Brouillon <br><br><!--saut de ligne-->
+            </div>
+            <div>
+                <button type="submit" routerLink="/" class="btn btn-primary"> voir Article </button><!--le boutton renvoie à l'accueil-->
+            </div>
+    </form><!--Fin du formulaire-->
+   </div><!--fin de la div class=col-md-8-->
+</div><!--fin de la div class=row-->
+
+
+   

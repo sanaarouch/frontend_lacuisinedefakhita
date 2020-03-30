@@ -1,1 +1,66 @@
 /* You can add global styles to this file, and also import other style files */
+body{
+	background:url("/assets/background.jpg") no-repeat;
+	background-size: cover;
+}
+
+
+
+.ensavoirplus{
+	background:white;
+	margin: 0 auto;
+	border: 1px solid white;
+	padding: 20px;
+	text-align:center;
+	height:250px;
+    
+}
+footer h4{
+	font-size: 20px;
+	margin-bottom: 10px;
+	padding-top: 20px;
+	background: #D3D3D3;
+	color: black;
+	text-align: center;
+	left:40px;
+	right:40px; 
+
+}
+footer article{
+
+	background:#D3D3D3;
+	
+	height: 150px;
+	text-align: center
+}
+footer h4{
+	font-size: 20px;
+	margin-bottom: 10px;
+}
+footer div:first-child{
+	display: flex;
+	justify-content: space-around;
+	background:#D3D3D3;
+   
+
+}
+footer ul{
+	display: flex;
+   justify-content: space-around;
+   color:black;
+   
+   
+}
+
+
+footer ul li a i{
+	font-size: 200%;
+
+}
+
+footer div:last-child{
+	background: #808080;
+	padding: 10px 0;
+    text-align: center;
+  
+}

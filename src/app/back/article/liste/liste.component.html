@@ -1,0 +1,48 @@
+<div class="row mt-3"><!--début de la div class=row-->
+    <div class="col-4">
+        <app-menu-dashboard></app-menu-dashboard><!--rajoute le menu dashboard qu'il soit visible-->
+    </div>
+    <div class="col-8"><!--début de la div class=col-8-->
+        <h1 style="color : white">Gestion des articles</h1>
+        <div>
+            <a routerLink="/admin/article/ajouter" class="btn btn-primary">Ajouter un article</a> <!--boutton rajouter un article-->
+        </div>
+        <!-- 
+            on dispose d'un service permet de récupérer tous les articles
+            articlefictifService getAll
+            nous allons utiliser le même service que dans la page d'accueil
+            liste.component.ts , ajouter le service 
+            déclarer le service dans le constructeur du composant
+            et utiliser dans une variable de class articles 
+        -->
+        <br>
+        <table class="table table-striped mt-3"><!--début du tableau-->
+            <tbody>
+                <tr *ngFor="let article of articles">
+                    <td style="color : white">
+                        {{ article.titre }}
+                    </td>
+                    <td style="color : white">
+                        {{ article._id }}
+                    </td>
+                    <td style="color : white">
+                        {{ article.nomAuteur }}
+                    </td>
+                    <td style="color : white">
+                        {{ article.estPublie }}
+                    </td>
+                    <td style="color : white">
+                        {{article.dateCreation|date:'shortDate'}} 
+                    </td>
+                    
+                    <td>
+                        <a [routerLink]="['/modifier/:id']" routerLinkActive="router-link-active"class="btn btn-warning">Modifier</a><!--permet de modifier l'article-->
+                    </td>
+                    <td>
+                        <a href="/" class="btn btn-danger">Supprimer</a>
+                    </td>
+                </tr>
+            </tbody>
+        </table><!--fin du tableau-->
+    </div><!--fin de la div class=col-8-->
+</div><!--fin de la div class=row-->

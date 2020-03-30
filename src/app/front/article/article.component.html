@@ -1,0 +1,32 @@
+<!--début de la div-->
+<div class="container; card-background" style="background-color: white;">
+<div class="row mt-3"  style="width: 1400px;"  style="margin-left: 80px;">
+    <div class="col-12" style="margin-top: 30px;">
+        <h1>{{ article[0].titre }}</h1><!--le [0] permet de ramener les infos de la base de donner de chaque id-->
+         <p>{{ article[0].contenu }}</p>
+         <img src="assets/{{article[0].img}}" alt="" class="img-fluid" style="width:400px;height:300px;">
+         <br><!--saut de ligne-->
+         <br>
+         <p>Le nom de l'auteur : {{article[0].nomAuteur}}</p>
+         <p>L'email de l'auteur : {{article[0].emailAuteur}}</p>
+        <!--<p>{{article[0].estPublie}}</p> je le met en commentaire car je ne souhaite pas voir le "true"-->
+         <p>Publié le : {{article[0].dateCreation|date:'shortDate'}}</p><!--shortData  permet de raccourcir l affichage de la date par rapport à son état initial-->
+
+         <a href="/" class="btn btn-secondary" style="margin-left: 30px;">commander <i class="fa fa-shopping-basket" aria-hidden="true"></i></a>
+         <a [routerLink]="['/contact']" class="btn btn-secondary" style="margin-left: 30px;">Demander un Devis</a>
+       <br><!--saut de ligne-->
+       <br>
+
+        <div *ngFor="let commentaire of commentaires">
+        <div *ngIf="article[0]._id === commentaire.idArticle">
+           <p>Commentaire :</p>
+           {{commentaire.contenu}}
+       </div>
+    </div>
+</div> 
+</div>
+</div><!--fin de la div container-->
+
+<!--{{ article | json }}
+< pas besoin de faire une boucle ici car lorsque l'on appelle l'adresse "https://jsonplaceholder.typicode.com/posts/1" le serveur nous retourne juste 1 article -->
+<!-- <pre>{{ _articles | json}}</pre> --> 
